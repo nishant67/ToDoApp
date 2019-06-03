@@ -1,0 +1,10 @@
+<div class="body-block">
+  <div class="list-block">
+    <div *ngFor="let item of SuperHeroList;let i = index" class="list-items">
+      <h2>{{item.value}}</h2>
+      <i class="fas fa-trash-alt position" (click)="deleteHero(i)"></i>
+      <i class="fas fa-edit position" (click)="editHero(i)"></i>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="superhero-heading">
+    <h1> Top Superheros</h1>
+  </div>
+  <div class="superhero-list">
+    <div class="superhero-name" *ngFor="let item of SuperHeroList;" (click)="onEdit(item)" >{{item.value}}</div>
+  </div>
+
+
+  <div *ngIf="SuperHeroName && SuperHeroName.length >0 "  class="edit-form">
+    <div class="edit-superhero-title"> Edit SuperHero</div>
+
+    <input type="text" [(ngModel)]="SuperHeroName" required class="superheroname"/>
+    <button (click)="onSubmit()" class="submit-btn">Submit</button>
+  </div>
